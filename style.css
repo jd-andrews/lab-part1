@@ -1,13 +1,15 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
 
+html {
+  height: 100%;
+}
 body {
   font-family: "Open Sans", sans-serif;
   background-color: #f9fafc;
   display: flex;
-  flex-direction: column;
-  position: absolute;
-  left: 17px;
-  top: 8px;
+  flex-flow: column;
+  margin: 0;
+  padding: 10px 10px 0 10px;
 }
 
 p {
@@ -15,7 +17,10 @@ p {
   padding: 0 0 0 10px;
   border-left: #69696a 3px solid;
 }
-
+nav {
+  display: flex;
+  flex-flow: column;
+}
 a {
   color: #69696a;
   text-decoration: none;
@@ -23,23 +28,112 @@ a {
   padding: 6px 0 6px 0;
 }
 
-button {
+.button {
   background-color: #000;
   color: #fff;
   padding: 11px;
   font-size: 11pt;
   border-radius: 50px;
   margin: 15px 0 15px 0;
+  text-align: center;
 }
-
-h1 h2 {
+footer {
+  display: flex;
+  width: 100%;
+}
+.button2 {
+  background-color: #000;
+  color: #fff;
+  padding: 11px;
+  font-size: 11pt;
+  border-radius: 50px;
+  margin: 15px 0 15px 0;
+  text-align: center;
+  width: 100%;
+}
+h2 {
   color: #000;
 }
 
-h1 {
+.topChirp {
+  color: #000000;
   font-size: 12pt;
 }
 
 h2 {
   font-size: 22pt;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: stretch;
+  }
+  nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    justify-self: flex-end;
+    width: 16em;
+  }
+  a {
+    align-self: center;
+  }
+  header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  main {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+  }
+
+  footer {
+    position: absolute;
+    bottom: 0;
+    right: 49%;
+    left: 49%;
+  }
+  .button {
+    padding: 8px 14px;
+  }
+  .button2 {
+    display: flex;
+    position: fixed;
+    bottom: 0px;
+    justify-self: center;
+    width: initial;
+    padding: 8px 14px;
+  }
+  .red {
+    width: 200px;
+    height: 200px;
+    background: rgba(247, 136, 167, 0.6);
+    border-radius: 50%;
+    position: absolute;
+    right: 120px;
+    top: 160px;
+  }
+  .purple {
+    width: 110px;
+    height: 110px;
+    background: rgba(207, 130, 213, 0.6);
+    border-radius: 50%;
+    position: absolute;
+    right: 60px;
+    top: 200px;
+  }
+  .orange {
+    width: 140px;
+    height: 140px;
+    background: rgba(247, 193, 162, 0.7);
+    border-radius: 50%;
+    position: absolute;
+    right: 80px;
+    top: 280px;
+  }
 }
